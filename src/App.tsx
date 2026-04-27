@@ -6,42 +6,44 @@
 import { motion } from "motion/react";
 import { Send, IceCream, Star, PartyPopper, Truck, Music, Instagram, Mail, Phone, MapPin } from "lucide-react";
 
+const base = import.meta.env.BASE_URL;
+
 const MENU_ITEMS = [
   {
     id: 1,
     title: "بطاط حلزوني",
     description: "بطاط مقرمش طازج مع نكهات مميزة",
-    image: "/images/spiral_potato.png",
+    image: `${base}images/spiral_potato.png`,
   },
   {
     id: 2,
     title: "آيس كريم",
     description: "آيس كريم بارد ومنعش لجميع أذواقكم",
-    image: "/images/ice_cream.png",
+    image: `${base}images/ice_cream.png`,
   },
   {
     id: 3,
     title: "نفيش",
     description: "نفيش طازج وحار بمذاق رائع",
-    image: "/images/popcorn.png",
+    image: `${base}images/popcorn.png`,
   },
   {
     id: 4,
     title: "شعر بنات",
     description: "حلاوة غزل البنات الوردية والناعمة",
-    image: "/images/cotton_candy.png",
+    image: `${base}images/cotton_candy.png`,
   },
   {
     id: 5,
     title: "ذرة",
     description: "حبوب الذرة بالزبدة والليمون",
-    image: "/images/corn.png",
+    image: `${base}images/corn.png`,
   },
   {
     id: 6,
     title: "فرايز",
     description: "بطاط مقلية ذهبية ومقرمشة",
-    image: "/images/fries.png",
+    image: `${base}images/fries.png`,
   },
 ];
 
@@ -126,9 +128,9 @@ export default function App() {
               <div className="flex items-center gap-3 px-6 py-4 bg-white rounded-2xl border border-amber-200 shadow-sm">
                 <div className="flex -space-x-2 space-x-reverse">
                   {[
-                    "/images/popcorn.png",
-                    "/images/ice_cream.png",
-                    "/images/fries.png"
+                    `${base}images/popcorn.png`,
+                    `${base}images/ice_cream.png`,
+                    `${base}images/fries.png`
                   ].map((src, i) => (
                     <div key={i} className="w-10 h-10 rounded-full border-2 border-white bg-slate-200 overflow-hidden">
                       <img
@@ -155,7 +157,7 @@ export default function App() {
           >
             <div className="col-span-2 relative aspect-[4/3] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white">
               <img
-                src="/images/hero_truck.png"
+                src={`${base}images/hero_truck.png`}
                 alt="Truck"
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
@@ -273,10 +275,10 @@ export default function App() {
           </div>
           <div className="flex gap-8 overflow-x-auto pb-10 hide-scrollbar cursor-grab active:cursor-grabbing">
             {[
-              { src: "/images/spiral_potato.png", title: "بطاط حلزوني مميز" },
-              { src: "/images/cotton_candy.png", title: "شعر بنات طازج" },
-              { src: "/images/popcorn.png", title: "نفيش حار وفريش" },
-              { src: "/images/corn.png", title: "ذرة بالزبدة والليمون" }
+              { src: `${base}images/spiral_potato.png`, title: "بطاط حلزوني مميز" },
+              { src: `${base}images/cotton_candy.png`, title: "شعر بنات طازج" },
+              { src: `${base}images/popcorn.png`, title: "نفيش حار وفريش" },
+              { src: `${base}images/corn.png`, title: "ذرة بالزبدة والليمون" }
             ].map((img, idx) => (
               <div key={idx} className="min-w-[400px] h-[500px] rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white/5 flex-shrink-0 group relative">
                 <img
